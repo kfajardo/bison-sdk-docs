@@ -73,8 +73,9 @@ function themeToggle(): HTMLElement {
     const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
     root.setAttribute('data-theme', next)
   }
-  // Default to dark (the terminal identity); respect an existing choice.
-  if (!document.documentElement.getAttribute('data-theme')) document.documentElement.setAttribute('data-theme', 'dark')
+  // Default to light — the Bison product identity has no dark mode; dark is an
+  // opt-in reader comfort for the docs chrome only.
+  if (!document.documentElement.getAttribute('data-theme')) document.documentElement.setAttribute('data-theme', 'light')
   return btn
 }
 
