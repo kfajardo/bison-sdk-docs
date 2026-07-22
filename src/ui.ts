@@ -24,26 +24,12 @@ export function table(headers: string[], rows: (Node | string)[][]): HTMLElement
   return h('div', { class: 'tbl-wrap' }, [h('table', {}, [thead, tbody])])
 }
 
-export function method(m: string): HTMLElement {
-  return h('span', { class: `method method--${m.toLowerCase()}` }, [m])
-}
-
 export function code(text: string): HTMLElement {
   return h('code', {}, [text])
 }
 
-/** Syntax-lite highlighted code block (keywords/strings/comments/functions). */
 export function pre(source: string): HTMLElement {
-  const escaped = source
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-  const html = escaped
-    .replace(/(\/\/[^\n]*)/g, '<span class="tok-com">$1</span>')
-    .replace(/('[^']*'|"[^"]*"|`[^`]*`)/g, '<span class="tok-str">$1</span>')
-    .replace(/\b(import|from|const|let|await|async|function|return|new|export|type|interface)\b/g, '<span class="tok-key">$1</span>')
-    .replace(/(\b[a-zA-Z_]\w*)(\()/g, '<span class="tok-fn">$1</span>$2')
-  return h('pre', {}, [h('code', { html })])
+  return h('pre', {}, [h('code', {}, [source])])
 }
 
 export function section(title: string): HTMLElement {

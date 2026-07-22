@@ -14,5 +14,6 @@
       "bison-jib-sdk/validation": ["../bison-sdk/src/validation/index.ts"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/**/*.test.ts"]
 }

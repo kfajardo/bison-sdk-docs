@@ -1,10 +1,6 @@
 # bison-sdk-docs
 
-Visual documentation and live playground for [`bison-jib-sdk`](../bison-sdk).
-
-Every component demo runs against the SDK's in-browser **mock transport** — no backend
-needed. The event ledger at the bottom streams the real `bison-*` events as you drive the
-components, so the docs show the contract executing.
+Documentation for [`bison-jib-sdk`](../bison-sdk).
 
 ## Run
 
@@ -21,21 +17,18 @@ drop the alias.
 
 ## What's in it
 
-- **Overview** — install, the transport seam, the scope model.
-- **Live · Onboarding / Partial onboarding / Bank CRUD** — the three real web components,
-  mock-driven, with a shared client so completing onboarding unlocks banking (the real gating).
-- **Reference · Functions / Validation / Styling / Backend contract** — tables generated from
-  the SDK surface, a live ABA-routing validator, the full class/slot/token/event maps, and the
-  backend coordination checklist.
+- **Quickstart** — install, connect the client, set the scope.
+- **Web components · Onboarding / Partial onboarding / Bank accounts** — usage, behavior,
+  public API, and an exclusive styling journey for each component.
+- **Reference · Functions / Validation** — static API, schema, and route references.
 
 ## Structure
 
 ```
 src/
-  main.ts     nav shell, routing, theme, ledger init
-  pages.ts    every page + the live playground widgets
+  main.ts     nav shell and routing
+  pages.ts    documentation pages + per-component styling journeys
   data.ts     reference tables (routes, functions, validation, styling contract)
-  ledger.ts   the live bison-* event ledger
   ui.ts       tiny render helpers (h, table, code, pre)
   app.css     the docs theme
 ```
