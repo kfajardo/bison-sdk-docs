@@ -9,9 +9,9 @@
     "skipLibCheck": true,
     "types": ["vite/client"],
     "paths": {
-      "@kfajardo/sdk": ["../bison-sdk/src/index.ts"],
-      "@kfajardo/sdk/components": ["../bison-sdk/src/components/index.ts"],
-      "@kfajardo/sdk/validation": ["../bison-sdk/src/validation/index.ts"]
+      "bison-jib-sdk": ["../bison-sdk/src/index.ts"],
+      "bison-jib-sdk/components": ["../bison-sdk/src/components/index.ts"],
+      "bison-jib-sdk/validation": ["../bison-sdk/src/validation/index.ts"]
     }
   },
   "include": ["src"],

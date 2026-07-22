@@ -1,7 +1,7 @@
 import { h, table, code, pre, section } from './ui'
 import * as D from './data'
-import { createClient, createMockState, mock } from '@kfajardo/sdk'
-import type { Scope } from '@kfajardo/sdk'
+import { createClient, createMockState, mock } from 'bison-jib-sdk'
+import type { Scope } from 'bison-jib-sdk'
 import { gsap } from 'gsap'
 import sdkStyles from '../../bison-sdk/src/styles.css?inline'
 import { closestConnector, cropVisualizerTarget, fitVisualizerTarget } from './visualizer'
@@ -85,16 +85,16 @@ export function overview(): HTMLElement {
     ]),
     h('div', { class: 'quickstart__code' }, [
       h('div', { class: 'quickstart__code-bar' }, ['Terminal']),
-      pre(`npm install @kfajardo/sdk`),
+      pre(`npm install bison-jib-sdk`),
       h('div', { class: 'quickstart__code-bar' }, ['HTML']),
       pre(`<bison-onboarding
   persona="wio"
   scope-id="wio_123"
 ></bison-onboarding>`),
       h('div', { class: 'quickstart__code-bar' }, ['JavaScript']),
-      pre(`import { createClient } from '@kfajardo/sdk'
-import { defineBisonComponents } from '@kfajardo/sdk/components'
-import '@kfajardo/sdk/styles.css'
+      pre(`import { createClient } from 'bison-jib-sdk'
+import { defineBisonComponents } from 'bison-jib-sdk/components'
+import 'bison-jib-sdk/styles.css'
 
 defineBisonComponents()
 const onboarding = document.querySelector('bison-onboarding')
@@ -226,7 +226,7 @@ export function fnsPage(): HTMLElement {
   const page = head('Functions', 'Use these standalone functions in your own onboarding interface.') as HTMLElement
   const dialog = returnTypeDialog()
   page.append(section('Create a client'))
-  page.append(pre(`import { createClient } from '@kfajardo/sdk'
+  page.append(pre(`import { createClient } from 'bison-jib-sdk'
 
 const {
   getUser,
@@ -523,8 +523,8 @@ function journeyCode(guide: EmbeddableGuide, step: number): string {
 ${indent(guide.markup, 2)}
 
   <script type="module">
-    import { createClient } from '@kfajardo/sdk'
-    import { defineBisonComponents } from '@kfajardo/sdk/components'${step >= 1 ? `\n    import '@kfajardo/sdk/styles.css'` : ''}
+    import { createClient } from 'bison-jib-sdk'
+    import { defineBisonComponents } from 'bison-jib-sdk/components'${step >= 1 ? `\n    import 'bison-jib-sdk/styles.css'` : ''}
 
     defineBisonComponents()
     document.querySelector('${guide.tag}').client = createClient({
@@ -570,8 +570,8 @@ function createDemo(id: EmbeddableId): DemoElement {
 }
 
 const componentUsage: Record<EmbeddableId, string> = {
-  onboarding: `import { createClient } from '@kfajardo/sdk'
-import { defineBisonComponents } from '@kfajardo/sdk/components'
+  onboarding: `import { createClient } from 'bison-jib-sdk'
+import { defineBisonComponents } from 'bison-jib-sdk/components'
 
 defineBisonComponents()
 
@@ -595,8 +595,8 @@ onboarding.labels = {
   error: 'Needs attention',
   business: 'Company details',
 }`,
-  partial: `import { createClient } from '@kfajardo/sdk'
-import { defineBisonComponents } from '@kfajardo/sdk/components'
+  partial: `import { createClient } from 'bison-jib-sdk'
+import { defineBisonComponents } from 'bison-jib-sdk/components'
 
 defineBisonComponents()
 
@@ -605,8 +605,8 @@ partial.client = createClient({
   baseUrl: 'https://api.yourhost.com',
   auth: { getToken: fetchClientToken },
 })`,
-  bank: `import { createClient } from '@kfajardo/sdk'
-import { defineBisonComponents } from '@kfajardo/sdk/components'
+  bank: `import { createClient } from 'bison-jib-sdk'
+import { defineBisonComponents } from 'bison-jib-sdk/components'
 
 defineBisonComponents()
 
@@ -649,7 +649,7 @@ const componentTypeExamples: Partial<Record<EmbeddableId, string>> = {
   OnboardingLabels,
   OnboardingPrefill,
   SectionUiState,
-} from '@kfajardo/sdk/components'
+} from 'bison-jib-sdk/components'
 
 const prefill: OnboardingPrefill = {
   business: { legalBusinessName: 'Bison Energy LLC' },
