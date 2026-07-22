@@ -3,7 +3,7 @@ import * as D from './data'
 import { createClient, createMockState, mock } from 'bison-jib-sdk'
 import type { Scope } from 'bison-jib-sdk'
 import { gsap } from 'gsap'
-import sdkStyles from '../../bison-sdk/src/styles.css?inline'
+import sdkStyles from 'bison-jib-sdk/styles.css?inline'
 import { closestConnector, cropVisualizerTarget, fitVisualizerTarget } from './visualizer'
 
 // The only mounted SDK previews live inside each component's styling journey.

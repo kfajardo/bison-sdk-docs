@@ -7,12 +7,7 @@
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "types": ["vite/client"],
-    "paths": {
-      "bison-jib-sdk": ["../bison-sdk/src/index.ts"],
-      "bison-jib-sdk/components": ["../bison-sdk/src/components/index.ts"],
-      "bison-jib-sdk/validation": ["../bison-sdk/src/validation/index.ts"]
-    }
+    "types": ["vite/client"]
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.ts"]

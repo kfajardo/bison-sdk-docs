@@ -1,6 +1,6 @@
 # bison-sdk-docs
 
-Documentation for [`bison-jib-sdk`](../bison-sdk).
+Documentation for [`bison-jib-sdk`](https://www.npmjs.com/package/bison-jib-sdk).
 
 ## Run
 
@@ -10,10 +10,7 @@ bun run dev      # vite dev server
 bun run build    # production build → dist/
 ```
 
-The app imports the SDK straight from source via a Vite alias
-(`../bison-sdk/src` — see `vite.config.ts`), so changes to the SDK show up live. To test the
-published package instead, set `"bison-jib-sdk": "file:../bison-sdk"` in `package.json` and
-drop the alias.
+The app uses the published `bison-jib-sdk` package.
 
 ## What's in it
 
