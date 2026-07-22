@@ -8,10 +8,10 @@ const sdk = (p: string) => fileURLToPath(new URL(`../bison-sdk/src/${p}`, import
 export default defineConfig({
   resolve: {
     alias: {
-      'bison-jib-sdk/components': sdk('components/index.ts'),
-      'bison-jib-sdk/validation': sdk('validation/index.ts'),
-      'bison-jib-sdk/styles.css': fileURLToPath(new URL('../bison-sdk/src/styles.css', import.meta.url)),
-      'bison-jib-sdk': sdk('index.ts'),
+      '@kfajardo/sdk/components': sdk('components/index.ts'),
+      '@kfajardo/sdk/validation': sdk('validation/index.ts'),
+      '@kfajardo/sdk/styles.css': fileURLToPath(new URL('../bison-sdk/src/styles.css', import.meta.url)),
+      '@kfajardo/sdk': sdk('index.ts'),
     },
   },
 })

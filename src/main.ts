@@ -1,5 +1,5 @@
 import './app.css'
-import { defineBisonComponents } from 'bison-jib-sdk/components'
+import { defineBisonComponents } from '@kfajardo/sdk/components'
 import { h } from './ui'
 import * as P from './pages'
 
